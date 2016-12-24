@@ -13,4 +13,37 @@ sudo apt-get install git
 #[hime] 中文輸入法
 sudo apt-get install hime
 
+#[UNITY TWEAK TOOL]
+sudo apt-get install unity-tweak-tool
+
+#[VMware player]
+mkdir ~/VMware && cd ~/VMware 
+wget -c http://goo.gl/JpvULv -O VMware-Player-6.0.0-1295980.x86_64.bundle.tar 
+tar -xvf VMware-Player-6.0.0-1295980.x86_64.bundle.tar 
+chmod +x VMware-Player-6.0.0-1295980.x86_64.bundle 
+sudo sh VMware-Player-6.0.0-1295980.x86_64.bundle 
+
+#[VirtualBox]
+sudo apt-get install virtualbox 
+sudo apt install virtualbox-ext-pack 
+sudo apt install virtualbox virtualbox-ext-pack 
+
+#[latex]
+sudo apt-get install texlive
+sudo apt-get install texlive-full
+sudo apt-get install gedit-latex-plugin
+sudo apt-get install gedit-latex-plugin texlive-fonts-recommended latex-beamer texpower texlive-pictures texlive-latex-extra texpower-examples imagemagick
+
+#[font]
+# english font: Consolas.ttf Monaco.ttf
+# https://github.com/kakkoyun/linux.files/tree/master/fonts
+# chinese font: 思源黑體
+# https://www.beforafter.org/blog/source-han-sans-font 
+
+wget https://github.com/kakkoyun/linux.files/blob/master/fonts/Consolas.ttf?raw=true
+sudo mkdir -p /usr/share/fonts/consolas
+sudo cp Consolas.ttf /usr/share/fonts/consolas/
+sudo chmod 644 /usr/share/fonts/consolas/Consolas.ttf
+cd /usr/share/fonts/consolas
+sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
 
