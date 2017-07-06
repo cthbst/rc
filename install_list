@@ -1,5 +1,5 @@
-sudo apt-get upgrade
 sudo apt-get update
+sudo apt-get upgrade
 
 #[chrome]
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -9,6 +9,24 @@ sudo apt-get install google-chrome-stable
 
 #[git]
 sudo apt-get install git
+
+# Set nickname
+git config --global user.name "cthbst"
+
+# Set email
+git config --global user.email "edison1998402@gmail.com"
+
+git config --global color.ui true
+git config --global alias.lg "log --color --graph --all \
+--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
+%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+git config --global credential.helper cache
+# Set git to use the credential memory cache
+
+git config --global credential.helper 'cache --timeout=3600'
+# Set the cache to timeout after 1 hour (setting is in seconds)
+
 
 #[hime] 中文輸入法
 sudo apt-get install hime
