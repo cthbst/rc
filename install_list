@@ -73,3 +73,9 @@ sudo unzip NotoSansCJKtc-hinted.zip -d /usr/share/fonts/Noto\ Sans\ CJK\ TC/
 cd /usr/share/fonts/Noto\ Sans\ CJK\ TC/
 sudo chmod 644 *.otf
 sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
+
+
+#[sublime 3] 文字編輯器
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
