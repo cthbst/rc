@@ -55,13 +55,21 @@ sudo apt-get install gedit-latex-plugin texlive-fonts-recommended latex-beamer t
 #[font]
 # english font: Consolas.ttf Monaco.ttf
 # https://github.com/kakkoyun/linux.files/tree/master/fonts
-# chinese font: 思源黑體
-# https://www.beforafter.org/blog/source-han-sans-font 
 
-wget https://github.com/kakkoyun/linux.files/blob/master/fonts/Consolas.ttf?raw=true
+cd ~/Desktop/
+wget https://github.com/kakkoyun/linux.files/raw/master/fonts/Consolas.ttf
 sudo mkdir -p /usr/share/fonts/consolas
-sudo cp Consolas.ttf /usr/share/fonts/consolas/
+sudo mv Consolas.ttf /usr/share/fonts/consolas/
 sudo chmod 644 /usr/share/fonts/consolas/Consolas.ttf
 cd /usr/share/fonts/consolas
 sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
 
+# chinese font: 思源黑體
+# https://www.beforafter.org/blog/source-han-sans-font 
+
+cd ~/Desktop/
+wget https://noto-website.storage.googleapis.com/pkgs/NotoSansCJKtc-hinted.zip
+sudo unzip NotoSansCJKtc-hinted.zip -d /usr/share/fonts/Noto\ Sans\ CJK\ TC/
+cd /usr/share/fonts/Noto\ Sans\ CJK\ TC/
+sudo chmod 644 *.otf
+sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
