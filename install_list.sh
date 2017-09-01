@@ -8,11 +8,11 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt-get update 
 sudo apt-get install google-chrome-stable
 
-#[git]
-sudo apt-get install git
-
 #[vim]
 sudo apt-get install vim
+
+#[git]
+sudo apt-get install git
 
 # Set nickname
 git config --global user.name "cthbst"
