@@ -1,18 +1,18 @@
 #!/bin/sh
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 #[chrome]
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-sudo apt-get update 
-sudo apt-get install google-chrome-stable
+sudo apt-get -y update 
+sudo apt-get -y install google-chrome-stable
 
 #[vim]
-sudo apt-get install vim
+sudo apt-get -y install vim
 
 #[git]
-sudo apt-get install git
+sudo apt-get -y install git
 
 # Set nickname
 git config --global user.name "cthbst"
@@ -33,10 +33,10 @@ git config --global credential.helper 'cache --timeout=3600'
 
 
 #[hime] 中文輸入法
-sudo apt-get install hime
+sudo apt-get -y install hime
 
 #[UNITY TWEAK TOOL]
-sudo apt-get install unity-tweak-tool
+sudo apt-get -y install unity-tweak-tool
 
 #[VMware player]
 mkdir ~/VMware && cd ~/VMware 
@@ -46,15 +46,15 @@ chmod +x VMware-Player-6.0.0-1295980.x86_64.bundle
 sudo sh VMware-Player-6.0.0-1295980.x86_64.bundle 
 
 #[VirtualBox]
-sudo apt-get install virtualbox 
-sudo apt install virtualbox-ext-pack 
-sudo apt install virtualbox virtualbox-ext-pack 
+sudo apt-get -y install virtualbox 
+sudo apt -y install virtualbox-ext-pack 
+sudo apt -y install virtualbox virtualbox-ext-pack 
 
 #[latex]
-sudo apt-get install texlive
-sudo apt-get install texlive-full
-sudo apt-get install gedit-latex-plugin
-sudo apt-get install gedit-latex-plugin texlive-fonts-recommended latex-beamer texpower texlive-pictures texlive-latex-extra texpower-examples imagemagick
+sudo apt-get -y install texlive
+sudo apt-get -y install texlive-full
+sudo apt-get -y install gedit-latex-plugin
+sudo apt-get -y install gedit-latex-plugin texlive-fonts-recommended latex-beamer texpower texlive-pictures texlive-latex-extra texpower-examples imagemagick
 
 #[font]
 # english font: Consolas.ttf Monaco.ttf
@@ -80,11 +80,11 @@ sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
 
 
 #[sublime 3] 文字編輯器
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get update
-sudo apt-get install sublime-text-installer
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+sudo apt-get -y update
+sudo apt-get -y install sublime-text-installer
 
 #[Java]
-sudo apt-add-repository ppa:webupd8team/java -y
-sudo apt-get update -y
-sudo apt-get install oracle-java8-installer -y
+sudo apt-add-repository -y ppa:webupd8team/java
+sudo apt-get -y update
+sudo apt-get -y install oracle-java8-installer
