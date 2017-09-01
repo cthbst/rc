@@ -11,6 +11,9 @@ sudo apt-get install google-chrome-stable
 #[git]
 sudo apt-get install git
 
+#[vim]
+sudo apt-get install vim
+
 # Set nickname
 git config --global user.name "cthbst"
 
