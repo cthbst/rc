@@ -8,6 +8,9 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt-get -y update 
 sudo apt-get -y install google-chrome-stable
 
+#[development tool]
+sudo apt -y install build-essential
+
 #[vim]
 sudo apt-get -y install vim
 
